@@ -175,6 +175,42 @@ console.log(`El usuario : ${nombreUsuario}esta intento logearse con una contrase
 
 //lo que prosigue  es que el sistema contejera los datos ingresados con la base datos y en caso de que los datos sean correctos comenzara0 la sesion  en la plataforma actualizando estos assertValidExecutionArguments.
 
-//Dado que Marco es el genero
+//Dado que Marco es del genero Masculino, y denota que su estatus de relacion no ha sido capturado o los mantiene privado esto genera la actualizacion de los valores de las variables
+
+generoUsuario="M"
+estatusRelacionSentimental=null
+
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su informacion de perfil podemos deducir que es del genero
+    ${generoUsuario} y que su estus de relacion es<: ${estatusRelacionSentimental} y su ultima publicacon se realizo el: ${fecha_ultimoPost}`);
+
+//Comparando NULL vs UNDEFINED
+//S i bien UNDEFINED  y NULL tienen el mismo valor, no tienen el mismo tipo de dato 
+
+console.log("Comparacion de la eqidad entre Undefined y Null")
+console.log((fecha_ultimoPost == estatusRelacionSentimental)?
+    "Ambas variables tienen el mismo valor" :
+    "las variables no tienen el mismo valor"
+);
+
+
+console.log("Comparacion de la eqidad entre Undefined y Null")
+console.log((fecha_ultimoPost === estatusRelacionSentimental)?
+    "Ambas variables tienen el mismo valor y ele mismo tipo de dato" :
+    "las variables tienen el mismo valor, pero no el mismo tipo de dato"
+);
+
+// 8. FUNCTION (Funciones)
+console.warn("--- Tipo de Dato FUNCTION (Función)")
+
+// Declaramos una funcion que nos permita recibir un paramento en este caso el nombre de la persona a saludar, y le enviamos un saludo, esta función la asignamos a una constante.
+const saludar =  function(nombre){return `Hola, ${nombre}!`}
+
+// Invocamos a la función declarada
+console.log(saludar('Marco'));
+
+//Y que tipo de dato tiene esta constante
+console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`)
+
+
 
 
