@@ -10,7 +10,9 @@ de repaso en JavaScript puro, con el objetivo de confirmar los conocimientos bas
 |NO. |Descripcion|Estatus|
 |--|--|--|
 |1.|Metodologia de Evaluacion | ✅Finaliza|
-|2.|Inicializacion del Proyecto de fundamentos de JS|Activa|
+|2.|Inicializacion del Proyecto de fundamentos de JS|✅Finaliza|
+|3.|Ejercicio 01:Declaracion de variables JS |✅Finaliza |
+|4.|Ejercicio 02:Declaracion de variables JS (undefined/Boolean/Number/String//Bigint/Symbol/Null/Function) [Pendiente]|Activa |
 
 ### Autor 
 Brian J. Mendoza Marquez
