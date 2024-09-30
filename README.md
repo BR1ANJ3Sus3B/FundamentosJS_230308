@@ -12,7 +12,8 @@ de repaso en JavaScript puro, con el objetivo de confirmar los conocimientos bas
 |1.|Metodologia de Evaluacion | ✅Finaliza|
 |2.|Inicializacion del Proyecto de fundamentos de JS|✅Finaliza|
 |3.|Ejercicio 01:Declaracion de variables JS |✅Finaliza |
-|4.|Ejercicio 02:Declaracion de variables JS (undefined/Boolean/Number/String//Bigint/Symbol/Null/Function) [✅]|Finaliza |
+|4.|Ejercicio 02:Declaracion de variables JS (undefined/Boolean/Number/String//Bigint/Symbol/Null/Function) |✅Finaliza |
+|5.|Ejercicio 03:Repaso de objetos js  |Pendiente  |
 
 ### Autor 
 Brian J. Mendoza Marquez
