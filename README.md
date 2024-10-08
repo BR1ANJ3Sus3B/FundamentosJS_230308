@@ -17,8 +17,8 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
 |6.|Ejercicio 04: Repaso de Arreglos en JS|18|✔️Finalizada|
 
 ### Autor 
-Brian J. Mendoza Marquez
-Unidad 1
-Aplicacion web Orientada A servicios
-Septiembre 2024
+Brian J. Mendoza Marquez <br>
+Unidad 1 <br>
+Aplicacion web Orientada A servicios<br>
+Septiembre 2024<br>
 
