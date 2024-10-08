@@ -192,60 +192,62 @@ console.log(`El septimo signo zodiacal es: ${signo7}`)
 //Congelamos el arreglo volviendolo INMUTABLE:
 Object.freeze(signosZodiacales);
 
-//Filtrado de datos
-console.log("%c11.- Filtrado de Elemento dentro de un arreglo utilizando el método FILTER", style_console);
+//Filtrado de Datos
+console.log("%c11.- Filtrado de Elementos dentro de un Arreglo utilizando  el método FILTER", style_console);
 
-console.table(estudiantes)
-
-//Antges de filtrar datos llamemos el arreglo con ID de los elementos
-estudiantes.push("Angel Rufino")
-estudiantes.push("Esther Gonzales")
-estudiantes.push("Tania Ibarra")
-estudiantes.push("Jonathan Baldemar")
-estudiantes.push("Dulce Balderas")
-estudiantes.push("Uriel Medina")
+console.table(estudiantes);
+//Antes de filtrar datos llenemos el arreglo con 10 Elementos
+estudiantes.push("Ángel Rufino")
+estudiantes.push("Osvaldo Abishai")
+estudiantes.push("Karen Negrete")
+estudiantes.push("Uriel Abdalha")
+estudiantes.push("Lorena Galindo")
+estudiantes.push("Esther González")
 console.table(estudiantes);
 
-Object.freeze(estudiantes);
-//Filter es un estado que recorre lo elementos de un arreglo haciendo alguna tarea en especifico, lo que tenemos que considerar es que este nuevo arreglo resultante es un objeto nuevo que puede ser mutable
-console.log("Filtrado de los primeros 5 elementos")
-let nuevoEstudiantes = estudiantes.filter(num => num<5);
-console.table(nuevoEstudiantes)
-console.table(filtraPrimeros5(estudiantes))
+ Object.freeze(estudiantes);
 
-//Filtrar a los estudiantes que su nombre tenga mas de 15 caracteres 
-let nuevoEstudiantesNombre = estudiantes.filter((estudiante) => estudiante.length>15);
-console.table(nuevoEstudiantesNombre)
+//Filter es un método que recorre los elementos de un arreglo haciendo alguna tarea en específico, lo que tenemos que considerar es que este nuevo arreglo resultante es un objeto nuevo que puede ser mutable.
 
-//Intentamos modificar el arreglo inmutable
-//estudiantes.pop();
-console.table(estudiantes);
-
-//  Intentamos modificar el nuevo arreglo qur no ha sido cogelado
-nuevoEstudiantes.unshift("Diego Tecorralco");
+console.log("Filtramos los primeros 5 elementos");
+let nuevoEstudiantes = estudiantes.filter((estudiante,index) => index<5);//Funcion lambda recorre todo el arreglo y solo devuelve en la iteracion estudiante que sean menor a 5 
 console.table(nuevoEstudiantes);
 
+console.log("Filtramos los nombres con mas de 15 carácteres");
+//Filtrar a los estudiantes que su nombre tenga más de 15 carácteres
+let nuevoEstudiantesNombre = estudiantes.filter((estudiante) => estudiante.length>15); //Es como si fuera la condición
+console.table(nuevoEstudiantesNombre);
+
+console.table(filtraPrimeros5(estudiantes));
+//Intentamos modificar el arreglo inmutable
+/*estudiantes.pop();
+console.table(estudiantes);*/
+
+//Intentamos modificar el nuevo arreglo que no ha sido congelado
+nuevoEstudiantes.unshift("Daniela Lopéz")
+console.table(nuevoEstudiantes)
+
+//La función lambda es mas corta al hacer una function
 function filtraPrimeros5(arregloEstudiantes)
 {
- let listaFiltrada=[]
- for(let i=0; i<5; i++){
-    listaFiltrada.push(arregloEstudiantes[i]);
- }
- return listaFiltrada;
+    let listaFiltrada=[]
+    for (let i=0; i<5; i++){
+        listaFiltrada.push(arregloEstudiantes[i]);
+    }
+    return listaFiltrada;
 }
 
-//Filtrado de Datos - Transformando los datos
-console.log("%c12.- Filtrado de Elementos dentro de un arreglo utilizando el método MAP", style_console);
-console.log("Imprimimos los elementos actuales de signosZodiacales")
-console.table(signosZodiacales)
+//Filtrado de Datos - Transformando datos
+console.log("%c12.- Filtrado de Elementos dentro de un Arreglo utilizando  el método MAP en el que necesitamos transformarlo", style_console);
+console.log("Imprimir los elementos actuales de signosZodiacales:")
+console.table(signosZodiacales);
+//Que podemos hacer si necesitamos el mismo arreglo pero ahora con todos sus elementos con letras MAYÚSCULAS
+console.table(signosZodiacales.map(signoZodiacal=> signoZodiacal.toUpperCase()));
 
-//Qué podemos hacer si necesitamos el mismo arreglo para ahora con todos sus elementos con letras MAYÚSCULAS 
-console.table(signosZodiacales.map(signoZodiacal => signoZodiacal.toUpperCase()));
+//Reducción de elementos de un arreglo, se usa cuando debemos hacer operaciones matemáticas o cuantittativas o un arreglo, como obtener totales, la idea es reducir la lista a un valor más simplificado.
 
-//Reducción de elemntos de un arreglo, se usa cuando debemos hacer operaciones matematicas o  cuantitativas a un arreglo, como obtener totales, la idea es reducir la lista a un valor más simplificado;
-const costosListaCompras = [15,52,50,16,90,32,50,28,105,45,2,94,10];
-
- //Cómo podemos clcular el total de una lista de costos de un carrito de compras
- console.log("Los precios son: ")
+const costosListaCompras = [15,52.50,16.90,32.50,28,105,45.2,94.10]
+//como podemos calular el total de una lista de costos de un carrito de compras
+console.log("Los precios son:")
 console.table(costosListaCompras)
-console.log(`El total de la compra es: ${costosListaCompras.reduce((total, precio) => total+precio,0).toFixed(2)}`);    
+console.log(`El total de la compra es: ${costosListaCompras.reduce((total, precio)=>total + precio,0).toFixed(2)}`)
