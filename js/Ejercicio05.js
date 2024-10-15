@@ -113,3 +113,29 @@ if(fechaActual >=inicioPrimavera && fechaActual< inicioVerano)
     
     console.log("Evaluando la mayoria de edad de una persona en Esatdos Unidos.")
     console.log(evaluarMayoriaEdad(edadPersona, "US"));
+    
+    console.log("%c3.- SWITCH - CASE (Elección por valor definido))",  style_console);
+    
+    //Calcualndo tu generaciòn en base a tu edad
+    let anioNacimiento = 2000;
+    let asignaGeneracion= (anioNacimiento)=>{
+    
+    switch(true)
+    {
+        case (anioNacimiento<1968): //Baby Boomers
+        return "Baby Boomers";
+    
+        case(anioNacimiento>1968 && anioNacimiento <=1980):
+        return "Generación X";
+    
+        case(anioNacimiento>1981 && anioNacimiento<=1993):
+        return "Millennials";
+    
+        case(anioNacimiento>1994 && anioNacimiento<=2010):
+        return "Generación Z";
+        
+        case(anioNacimiento>2011 && anioNacimiento<=2024):
+        return "Cristalitos";
+        }
+    }
+    
