@@ -15,7 +15,6 @@ Previo a iniciar el desarrollo de software para web usando el framework de NodeJ
 |4.|Ejercicio 02: Tipos de datos en JS|10|✔️Finalizada|
 |5.|Ejercicio 03: Repaso de objetos en JS|19|✔️Finalizada|
 |6.|Ejercicio 04: Repaso de Arreglos en JS|18|✔️Finalizada|
-|7.|Ejercicio 05: Repaso de Ciclos y Sentencias de Control en JS|Pendiente|Activa|
 
 
 ### Autor 
